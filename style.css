@@ -1,0 +1,56 @@
+body {
+  margin: 2em;
+}
+
+.title  {
+  font-family: 'Monoton', cursive;
+  font-size: 130px;
+  display: flex;
+  position: absolute;
+  left: 23%;
+  color: black;
+}
+
+.instructions > p {
+  color: white;
+  font-size: 20px;
+  position: relative;
+  top: 60px;
+  font-family: 'Source Code Pro', monospace;
+
+}
+.instructions {
+  position: relative;
+  top: 40px;
+  left: 190px;
+  width: 200px;
+  height: 100px;
+  background-color: rgb(245, 14, 14);
+}
+
+button{
+  border-radius: 6px;
+  width: 500px;
+  height: 400px;
+  background-color: rgb(39, 167, 79);
+  padding-bottom: 200px;
+  border-radius: 100px;
+}
+
+.pattern-buttons{
+  position: relative;
+  top: 400px;
+  left: 13%;
+  display: flex;
+  flex-direction: row;
+}
+
+.pattern-buttons2{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 500px;
+  left: 13%;
+}
+
+
