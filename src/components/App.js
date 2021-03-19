@@ -1,9 +1,8 @@
 import React from 'react'
 import './App.css'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Title from './Title'
-import Game from './Game'
-
+import Title from '../components/Title/Title'
+import Game from '../components/Game/Game'
 
 function App() {
   return (

@@ -1,0 +1,15 @@
+/* game page */
+.pattern-buttons {
+  text-align: center;
+  background-color: rgb(220, 255, 138);
+  padding-top: 50px;
+}
+
+/* game page title */
+.pattern-title > p {
+  font-family: 'Source Code Pro', monospace;
+  padding-top: 30px;
+  font-size: 30px;
+  position: relative;
+  top: -10px;
+}

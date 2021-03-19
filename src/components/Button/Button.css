@@ -1,0 +1,35 @@
+.pattern_buttons {
+  background-color: rgb(219, 244, 0);
+}
+
+.button_div {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  top: -200px;
+}
+
+.game_buttons {
+  border-radius: 6px;
+  width: 500px;
+  height: 400px;
+  background-color: rgb(39, 167, 79);
+  border-radius: 100px;
+  margin-bottom: 100px;
+  margin-right: 50px;
+}
+
+.pattern_one{
+  display: flex;
+  flex-direction: row;
+  padding-top: 100px;
+  padding-left: 200px;
+}
+
+.pattern_two{
+  display: flex;
+  flex-direction: row;
+  padding-left: 200px;
+}

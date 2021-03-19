@@ -1,6 +1,5 @@
 import React from 'react'
-import './App.css' 
-import Game from './Game'
+import '../App.css'
 import { NavLink } from 'react-router-dom'
 
 function howToPlay() {
@@ -16,7 +15,7 @@ function Title() {
         </div>
         <div class="buttons">
           <button class="instructions" onClick={howToPlay}>
-          <p>how to play?</p>
+          <p>how to play</p>
           </button>
         <NavLink to="/game">
           <button class="game">
