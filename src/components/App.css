@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+.App {
+  text-align: center;
+  background-color: rgb(255, 152, 25);
+}
+
+/* title  */
+.app-header > .title {
+  padding-top: 160px;
+  padding-bottom: 200px;
+  font-family: 'Monoton', cursive;
+  font-size: 180px;
+  /* color: rgb(230, 255, 70);  */
+  color: rgb(236, 255, 197);
+  position: relative;
+  top: -30px;
+}
+
+/* instructions button  */
+.buttons > .instructions {
+  position: relative;
+  top: -240px;
+  left: -50px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 30px;
+  background-color: rgb(225, 220, 220);
+}
+
+.instructions > p {
+  color: rgb(24, 22, 22);
+  font-size: 20px;
+  position: relative;
+  top: 3px;
+  font-family: 'Source Code Pro', monospace;
+}
+
+/* lets play button  */
+.game {
+  position: relative;
+  top: -240px;
+  left: 50px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 30px;
+  background-color: rgb(225, 220, 220);
+}
+
+.game > p {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  position: relative;
+  top: 6px;
+  font-family: 'Source Code Pro', monospace;
+}
+
