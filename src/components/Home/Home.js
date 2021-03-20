@@ -1,8 +1,11 @@
 import React from 'react'
 import '../App.css'
+import './Home.css'
 import { NavLink } from 'react-router-dom'
+import logo from './memory.png';
+import logo_two from './game.png'
 
-function howToPlay() {
+function howToPlayButton() {
   alert("Repeat back the pattern based on the sounds you hear and the colors you see :)");
 }
 
@@ -11,11 +14,12 @@ function Title() {
     <div className="Title">
       <div class="app-header">
         <div class="title">
-          <p id="glow">memory game</p>
+        <img src={logo} alt="Logo" />
+        <img src={logo_two} alt="Logo" />
         </div>
-        <div class="buttons">
-          <button class="instructions" onClick={howToPlay}>
-          <p>how to play</p>
+        <div class="home-buttons">
+          <button class="instructions" onClick={howToPlayButton}>
+          <p>instructions</p>
           </button>
         <NavLink to="/game">
           <button class="game">
@@ -28,4 +32,4 @@ function Title() {
   )
 }
 
-export default Title;
+export default Title

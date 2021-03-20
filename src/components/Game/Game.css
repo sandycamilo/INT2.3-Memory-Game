@@ -2,7 +2,7 @@
 .pattern-buttons {
   text-align: center;
   background-color: rgb(220, 255, 138);
-  padding-top: 50px;
+  padding-top: 10px;
 }
 
 /* game page title */
@@ -12,4 +12,21 @@
   font-size: 30px;
   position: relative;
   top: -10px;
+}
+
+/* game start and end buttons */
+/* .gameButtonArea {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  position: relative;
+  top: 200px;
+} */
+
+#startGame {
+  padding: 20px;
+}
+
+#stopGame {
+  padding: 20px;
 }

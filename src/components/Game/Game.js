@@ -6,7 +6,14 @@ function Game() {
   return (
     <div class="pattern-buttons">
       <div class="pattern-title">
-        <p></p>
+        {/* <div class="gameButtonArea"> */}
+          <button id="startGame">
+            Start
+          </button>
+          <button id="stopGame">
+            Stop
+          </button>
+        {/* </div> */}
         <Button />
       </div>
     </div>

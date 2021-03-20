@@ -1,5 +1,5 @@
 .pattern_buttons {
-  background-color: rgb(219, 244, 0);
+  background-color: white; 
 }
 
 .button_div {
@@ -15,21 +15,19 @@
   border-radius: 6px;
   width: 500px;
   height: 400px;
-  background-color: rgb(39, 167, 79);
-  border-radius: 100px;
-  margin-bottom: 100px;
-  margin-right: 50px;
+  /* background-color: rgb(53, 216, 105); */
+  background-color: rgb(132, 221, 254);
 }
 
 .pattern_one{
   display: flex;
   flex-direction: row;
-  padding-top: 100px;
-  padding-left: 200px;
+  padding-top: 60px;
+  padding-left: 98px;
 }
 
 .pattern_two{
   display: flex;
   flex-direction: row;
-  padding-left: 200px;
+  padding-left: 98px;
 }

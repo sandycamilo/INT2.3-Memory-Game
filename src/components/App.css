@@ -2,59 +2,7 @@
 
 .App {
   text-align: center;
-  background-color: rgb(255, 152, 25);
-}
-
-/* title  */
-.app-header > .title {
-  padding-top: 160px;
-  padding-bottom: 200px;
-  font-family: 'Monoton', cursive;
-  font-size: 180px;
-  /* color: rgb(230, 255, 70);  */
-  color: rgb(236, 255, 197);
-  position: relative;
-  top: -30px;
-}
-
-/* instructions button  */
-.buttons > .instructions {
-  position: relative;
-  top: -100px;
-  left: -50px;
-  padding-top: 20px;
-  padding-bottom: 100px;
-  padding-left: 100px;
-  padding-right: 100px;
-  border-radius: 30px;
-  background-color: rgb(252, 209, 180);
-}
-
-.instructions > p {
-  color: rgb(121, 44, 44);
-  font-size: 22px;
-  position: relative;
-  top: 25px;
-  font-family: 'Source Code Pro', monospace;
-}
-
-/* lets play button  */
-.game {
-  position: relative;
-  top: -100px;
-  left: 50px;
-  padding-top: 20px;
-  padding-bottom: 100px;
-  padding-left: 100px;
-  padding-right: 100px;
-  border-radius: 30px;
-  background-color: rgb(252, 209, 180);
-}
-
-.game > p {
-  color: rgb(121, 44, 44);
-  font-size: 22px;
-  position: relative;
-  top: 25px;
-  font-family: 'Source Code Pro', monospace;
+  background-color: rgb(232, 255, 201);
+  /* background-color: rgb(16, 148, 34); */
+  cursor: -webkit-grabbing; cursor: grabbing;
 }
