@@ -6,14 +6,14 @@ function Game() {
   return (
     <div class="pattern-buttons">
       <div class="pattern-title">
-        {/* <div class="gameButtonArea"> */}
-          <button id="startGame">
+        <div class="gameButtonArea">
+          <button id="startBtn" onclick="startGame()">
             Start
           </button>
-          <button id="stopGame">
+          <button class="hidden" id="stopBtn" nclick="stopGame()">
             Stop
           </button>
-        {/* </div> */}
+        </div>
         <Button />
       </div>
     </div>

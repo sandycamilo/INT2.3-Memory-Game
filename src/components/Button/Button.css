@@ -31,3 +31,52 @@
   flex-direction: row;
   padding-left: 98px;
 }
+
+/* game buttons */
+.pattern_one > #one {
+  background-color: rgb(255, 201, 209);
+}
+
+#one:active, #one.lit {
+  background: rgb(255, 38, 190);
+}
+
+.pattern_one > #two {
+  background-color: rgb(189, 255, 215);
+}
+
+#two:active, #two.lit {
+  background: rgb(38, 255, 125);
+}
+
+.pattern_one > #three {
+  background-color: rgb(223, 194, 255);
+}
+
+#three:active, #three.lit {
+  background: rgb(139, 38, 255);
+}
+
+.pattern_two > #four {
+  background-color: rgb(255, 253, 190);
+}
+
+#four:active, #four.lit {
+  background: rgb(255, 248, 38);
+}
+
+.pattern_two > #five {
+  background-color: rgb(202, 241, 255);
+}
+
+#five:active, #five.lit {
+  background: rgb(38, 251, 255);
+}
+
+.pattern_two > #six {
+  background-color: rgb(255, 221, 185);
+}
+
+#six:active, #six.lit {
+  background: rgb(255, 139, 38);
+}

@@ -3,6 +3,5 @@
 .App {
   text-align: center;
   background-color: rgb(232, 255, 201);
-  /* background-color: rgb(16, 148, 34); */
   cursor: -webkit-grabbing; cursor: grabbing;
 }
