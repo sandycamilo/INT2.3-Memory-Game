@@ -3,6 +3,7 @@
   text-align: center;
   background-color: rgb(220, 255, 138);
   padding-top: 10px;
+  padding-bottom: 300px;
 }
 
 /* game page title */
@@ -16,25 +17,34 @@
 
 /* game start and end buttons */
 .gameButtonArea {
-  /* background-color: red; */
+  /* background-color: rgb(255, 107, 97); */
   position: relative;
-  top: -1px;
-  left: -710px;
+  height: 120px;
+  top: -30px;
+  left: 0px;
 }
 
 #startBtn {
-  padding: 10px;
+  padding: 30px;
   margin: 10px;
-  font-size: 40px;
-  background-color: rgb(35, 172, 69);
+  background-color: rgb(42, 164, 72);
   color: white;
   border-radius: 10px;
+  position: relative;
+  left: 510px;
+  top: 70px;
+  border: navajowhite;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 20px;
+  letter-spacing: 6px;
 }
 
 #stopBtn {
-  padding: 10px;
+  padding: 30px;
   margin: 10px;
-  font-size: 25px;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 20px;
+  letter-spacing: 6px;
 }
 
 .hidden {

@@ -3,7 +3,6 @@ import './Game.css'
 import Button from '../Button/Button'
 import {startGame, stopGame} from '../Script'
 
-
 function Game() { 
   return (
     <div className="pattern-buttons">

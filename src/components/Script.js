@@ -1,13 +1,15 @@
 import '../components/Game/Game'
+import '../components/Button/Button'
+import '../components/Game/Game.css'
 
 //Global constants 
 const clueHoldTime = 1000; //how long each clue plays (1 second)
 const cluePauseTime = 333;
 const nextClueWaitTime = 1000; 
-const start = document.getElementById("startBtn")
-const stop = document.getElementById("stopBtn")
-const lit = document.getElementById("button")
-const clear = document.getElementById("button")
+const start = document.getElementById("startBtn");
+const stop = document.getElementById("stopBtn");
+const litbutton = document.getElementById("gamebutton");
+const clearbutton = document.getElementById("gamebutton");
 
 //Global variables
 let pattern = [2, 5, 4, 3, 2, 1, 2, 4, 6, 3, 2, 1, 4, 6, 6];
@@ -21,15 +23,15 @@ let guessCounter = 0;
 function wordToNum(word) {
   if (word === "one") {
     return 1
-  } else if (word === 'two') {
+  } else if (word === "two") {
     return 2
-  } else if (word === 'three') {
+  } else if (word === "three") {
     return 3
-  } else if (word === 'four') {
+  } else if (word === "four") {
     return 4
-  } else if (word === 'five') {
+  } else if (word === "five") {
     return 5 
-  } else if (word === 'six') {
+  } else if (word === "six") {
     return 6
   }
 }
@@ -56,12 +58,12 @@ export function stopGame(){
 
 //Lit and clearing buttons
 function lightButton(btn){
-  (lit + btn).classList.add("lit")
-  document.getElementById("button" + btn).classList.add("lit")
+  (litbutton + btn).classList.add("lit");
+  // document.getElementById("button" + btn).classList.add("lit")
 }
 
 function clearButton(btn){
-  (clear + btn).classList.remove("lit")
+  (clearbutton + btn).classList.remove("lit");
 }
 
 //Play a single clue 
@@ -79,7 +81,6 @@ function playClueSequence(){
   guessCounter = 0;
   let delay = nextClueWaitTime; //set delay to initial wait time
   for(let i=0;i<=progress;i++){ // for each clue that is revealed so far
-    // console.log("play single clue: " + pattern[i] + " in " + delay + "ms")
     setTimeout(playSingleClue,delay,pattern[i]) // set a timeout to play that clue
     delay += clueHoldTime 
     delay += cluePauseTime;

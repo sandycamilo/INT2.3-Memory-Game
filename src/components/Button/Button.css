@@ -33,48 +33,60 @@
 /* game buttons */
 .pattern_one > #one {
   background-color: rgb(255, 201, 209);
+  border: navajowhite;
 }
 
 #one:active, .one.lit {
   background: rgb(255, 38, 190);
+  border: navajowhite;
 }
 
 .pattern_one > #two {
   background-color: rgb(189, 255, 215);
+  border: navajowhite;
 }
 
 #two:active, #two.lit {
   background: rgb(38, 255, 125);
+  border: navajowhite;
 }
 
 .pattern_one > #three {
   background-color: rgb(223, 194, 255);
+  border: navajowhite;
 }
 
 #three:active, #three.lit {
   background: rgb(139, 38, 255);
+  border: navajowhite;
 }
 
 .pattern_two > #four {
   background-color: rgb(255, 253, 190);
+  border: navajowhite;
 }
 
 #four:active, #four.lit {
   background: rgb(255, 248, 38);
+  border: navajowhite;
 }
 
 .pattern_two > #five {
   background-color: rgb(202, 241, 255);
+  border: navajowhite;
 }
 
 #five:active, #five.lit {
   background: rgb(38, 251, 255);
+  border: navajowhite;
 }
 
 .pattern_two > #six {
   background-color: rgb(255, 221, 185);
+  border: navajowhite;
 }
 
 #six:active, #six.lit {
   background: rgb(255, 139, 38);
+  border: navajowhite;
 }
