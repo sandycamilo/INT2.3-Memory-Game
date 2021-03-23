@@ -13,23 +13,21 @@
 
 .game_buttons {
   border-radius: 6px;
-  width: 500px;
-  height: 400px;
-  /* background-color: rgb(53, 216, 105); */
-  background-color: rgb(132, 221, 254);
+  width: 400px;
+  height: 300px;
 }
 
 .pattern_one{
   display: flex;
   flex-direction: row;
   padding-top: 60px;
-  padding-left: 98px;
+  padding-left: 15%;
 }
 
 .pattern_two{
   display: flex;
   flex-direction: row;
-  padding-left: 98px;
+  padding-left: 15%;
 }
 
 /* game buttons */
@@ -37,7 +35,7 @@
   background-color: rgb(255, 201, 209);
 }
 
-#one:active, #one.lit {
+#one:active, .one.lit {
   background: rgb(255, 38, 190);
 }
 

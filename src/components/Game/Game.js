@@ -1,20 +1,31 @@
 import React from 'react'
 import './Game.css'
 import Button from '../Button/Button'
+import {startGame, stopGame} from '../Script'
 
-function Game() {
+
+function Game() { 
   return (
-    <div class="pattern-buttons">
-      <div class="pattern-title">
-        <div class="gameButtonArea">
-          <button id="startBtn" onclick="startGame()">
+    <div className="pattern-buttons">
+      <div className="pattern-title">
+        <div className="gameButtonArea">
+          <button id="startBtn" onClick={() => startGame()}>
             Start
           </button>
-          <button class="hidden" id="stopBtn" nclick="stopGame()">
+          <button className="hidden" id="stopBtn" onClick={() => stopGame()}>
             Stop
           </button>
         </div>
-        <Button />
+        <div className="pattern_one">
+          <Button id="one" />
+          <Button id="two" />
+          <Button id="three" />
+        </div>
+        <div className="pattern_two">
+          <Button id="four" />
+          <Button id="five" />
+          <Button id="six" />
+        </div>
       </div>
     </div>
   )
