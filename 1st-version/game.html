@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Memory Game</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css  -->
+    <link rel="stylesheet" href="./game.css">
+    <!-- import the webpage's javascript file -->
+    <script src="script.js" defer></script>
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  </head>
+  <body>
+  <div id ="playbuttons">
+    <button id="startBtn" onclick="startGame()">
+      Start
+    </button>
+    <button class="hidden" id="stopBtn" onclick="stopGame()">
+      Stop
+    </button>
+  </div>
+ 
+  <div id="pattern1">
+    <button id="button1"  onclick="guess(1)" onmousedown="startTone(1)" onmouseup="stopTone()">
+    </button>
+    <button id="button2"  onclick="guess(2)" onmousedown="startTone(2)" onmouseup="stopTone()">
+    </button>
+    <button id="button3"  onclick="guess(3)" onmousedown="startTone(3)" onmouseup="stopTone()">
+    </button>
+  </div>
+  <div id="pattern2">
+    <button id="button4"  onclick="guess(4)" onmousedown="startTone(4)" onmouseup="stopTone()">
+    </button>
+    <button id="button5"  onclick="guess(5)" onmousedown="startTone(5)" onmouseup="stopTone()">
+    </button>
+    <button id="button6"  onclick="guess(6)" onmousedown="startTone(6)" onmouseup="stopTone()">
+    </button>
+  </div>
+  </div>  
+  </body>
+</html>

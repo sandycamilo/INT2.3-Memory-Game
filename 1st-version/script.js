@@ -1,82 +1,87 @@
-// global constants
-//how long each clue plays (1 second)
-const cluePlayTime = 1000; 
+//Global constants 
 const cluePauseTime = 333;
 const nextClueWaitTime = 1000; 
 
-// global variables
-let pattern = [2, 5, 4, 1, 2, 6, 2, 6, 3, 4, 1, 6];
+//Global variables
+let pattern = []
 let progress = 0;
 let gamePlaying = false;
 let tonePlaying = false;
-// volume of the tone 
-let volumeTone = 0.9;
+let volume = 0.9;
 let guessCounter = 0;
+let clueHoldTime = 600; //how long each clue plays (1 second)
+let mistakecount = 0;
 
-// start the game  
+// generate random pattern for every game 
+function secretPattern(){
+  for (i = 0; i < 15; i++) {
+    pattern.push(Math.floor(Math.random() * 6) + 1)
+  }
+}
+
+//Start the game
 function startGame(){
   //game variables
   progress = 0;
   gamePlaying = true;
-  //swap start and stop buttons - when you press start you can see stop now
-  document.getElementById("start").classList.add("hidden");
-  document.getElementById("stop").classList.remove("hidden");
-  playClues();
+  mistakecount = 0;
+  //swap start and stop buttons - hide and un-hide
+  document.getElementById("startBtn").classList.add("hidden");
+  document.getElementById("stopBtn").classList.remove("hidden");
+  secretPattern();
+  playClueSequence();
 }
 
-// stop the game
+//Stop the game
 function stopGame(){
   //game variables
   gamePlaying = false;
   //swap start and stop buttons - hide and un-hide
-  document.getElementById("start").classList.remove("hidden");
-  document.getElementById("stop").classList.add("hidden");
+  document.getElementById("startBtn").classList.remove("hidden");
+  document.getElementById("stopBtn").classList.add("hidden");
 }
 
-// light the buttons and dim the buttons
+//Lighting and clearing buttons
 function lightButton(btn){
   document.getElementById("button"+btn).classList.add("lit")
 }
-function dimButton(btn){
+function clearButton(btn){
   document.getElementById("button"+btn).classList.remove("lit")
 }
 
-// play one single clue 
+//Playing a single clue 
 function playSingleClue(btn){
   if(gamePlaying){
     lightButton(btn);
-    // generate sound 
-    playTone(btn,cluePlayTime);
-    // built in javascript function - set time out
-    setTimeout(dimButton,cluePlayTime,btn);
+    playTone(btn,clueHoldTime);
+    // built in javascript function 
+    setTimeout(clearButton,clueHoldTime,btn);
   }
 }
 
-// play all of the clues 
-function playClues(){
+//Playing whole clue sequence 
+function playClueSequence(){
   guessCounter = 0;
-  // set delay to initial wait time
-  let delay = nextClueWaitTime;
-  // for each clue that is revealed so far
-  for(let i=0;i<=progress;i++){ 
+  let delay = nextClueWaitTime; //set delay to initial wait time ~ 1000 =  1sec 
+  for(let i=0; i<=progress; i++){ // for each clue that is revealed so far
     // console.log("play single clue: " + pattern[i] + " in " + delay + "ms")
-    // set a timeout to play that clue
-    setTimeout(playSingleClue,delay,pattern[i]) 
-    delay += cluePlayTime 
-    delay += cluePauseTime;
+    setTimeout(playSingleClue, delay, pattern[i]) // set a timeout to play that clue
+    // speed up every time it plays another note 
+    delay = (delay - 133) + clueHoldTime; 
+    delay = delay + cluePauseTime; //333
   }
 }
 
-// user loses the game - display message
+//User loses the game 
 function loseGame(){
   stopGame();
-  alert("Game Over. You lost :(");
+  alert("Game Over. You lost.");
 }
 
-// user wins the game - display message
+//User wins the game 
 function winGame(){
   stopGame();
-  alert("Congrats! You won! :D");
+  alert("Congrats! You won!");
 }
 
 function guess(btn){
@@ -85,22 +90,31 @@ function guess(btn){
     return;
   }
 
-  //if the user is correct 
+  //pattern generated - guesscounter starts at 0 
+  //btn pressed
+  // 5 == 5 
   if(pattern[guessCounter] === btn){
-    if(guessCounter === progress) {
-      if(progress === pattern.length -1){ 
-         winGame();
+    //guesscounter starts at 0 , progress starts at 0 
+    //0 == 0 
+    //progress- so we know where we are at in the pattern of 15 digits 
+      if(guessCounter === progress) {
+        //progress starts at 0 , last digit in the pattern
+        // 15 == 15
+        if(progress === pattern.length -1){ 
+          //player wins the game 
+          winGame();
+        }else {
+          // progress + 1 
+          // 0 + 1 = 1 
+          progress++;
+          // play every clue in the sequence as they are added 
+          playClueSequence();
+        } 
       }else {
-        // if the pattern is correct to what the player is inputng go to the next clue 
-        progress++;
-        playClues();
-      } 
-    }else {
-      //player is advancing, so we check the next guess - add onother to the counter
-      guessCounter++;
-    }
+        //guess counter starts 0 and adds 1 as it progresses 
+        guessCounter++;
+      }
   }else {
-    //the user's guess was incorrect so game is over
     loseGame();
   }
 }
@@ -111,13 +125,13 @@ const freqMap = {
   1: 261.6,
   2: 329.6,
   3: 392,
-  4: 466.2, 
-  5: 259.2,
-  6: 429.2
+  4: 466.2,
+  5: 234.2,
+  6: 324.9
 }
 function playTone(btn,len){ 
   o.frequency.value = freqMap[btn]
-  g.gain.setTargetAtTime(volumeTone,context.currentTime + 0.05,0.025)
+  g.gain.setTargetAtTime(volume,context.currentTime + 0.05,0.025)
   tonePlaying = true
   setTimeout(function(){
     stopTone()
@@ -126,7 +140,7 @@ function playTone(btn,len){
 function startTone(btn){
   if(!tonePlaying){
     o.frequency.value = freqMap[btn]
-    g.gain.setTargetAtTime(volumeTone,context.currentTime + 0.05,0.025)
+    g.gain.setTargetAtTime(volume,context.currentTime + 0.05,0.025)
     tonePlaying = true
   }
 }

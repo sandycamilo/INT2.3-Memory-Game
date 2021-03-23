@@ -1,0 +1,114 @@
+body {
+  background-color: rgb(220, 255, 138);
+}
+
+/* game start and end buttons */
+#playbuttons {
+  position: relative;
+  left: 270px;
+  top: 40px;
+}
+
+#startBtn {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 20px;
+  letter-spacing: 6px;
+  width: 100px;
+  height: 100px;
+  border: navajowhite;
+  outline: none;
+}
+
+#stopBtn {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 20px;
+  letter-spacing: 6px;
+  width: 100px;
+  height: 100px;
+  border: navajowhite;
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
+
+/* button  */
+button {
+  width: 400px;
+  height: 300px;
+  outline: none;
+}
+
+/* game buttons */
+#pattern1 {
+  position: relative;
+  left: 250px;
+  top: 100px;
+}
+
+#pattern2 {
+  position: relative;
+  left: 250px;
+  top: 100px;
+}
+
+#button1 {
+  background-color: rgb(255, 201, 209);
+  border: navajowhite;
+}
+
+#button1:active, #button1.lit {
+  background: rgb(255, 38, 190);
+  border: navajowhite;
+}
+
+#button2 {
+  background-color: rgb(189, 255, 215);
+  border: navajowhite;
+}
+
+#button2:active, #button2.lit {
+  background: rgb(38, 255, 125);
+  border: navajowhite;
+}
+
+#button3 {
+  background-color: rgb(223, 194, 255);
+  border: navajowhite;
+}
+
+#button3:active, #button3.lit {
+  background: rgb(139, 38, 255);
+  border: navajowhite;
+}
+
+#button4 {
+  background-color: rgb(255, 253, 190);
+  border: navajowhite;
+}
+
+#button4:active, #button4.lit {
+  background: rgb(255, 248, 38);
+  border: navajowhite;
+}
+
+#button5 {
+  background-color: rgb(202, 241, 255);
+  border: navajowhite;
+}
+
+#button5:active, #button5.lit {
+  background: rgb(38, 251, 255);
+  border: navajowhite;
+}
+
+#button6 {
+  background-color: rgb(255, 221, 185);
+  border: navajowhite;
+}
+
+#button6:active, #button6.lit {
+  background: rgb(255, 139, 38);
+  border: navajowhite;
+}

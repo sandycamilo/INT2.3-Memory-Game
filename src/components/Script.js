@@ -8,16 +8,18 @@ const cluePauseTime = 333;
 const nextClueWaitTime = 1000; 
 const start = document.getElementById("startBtn");
 const stop = document.getElementById("stopBtn");
-const litbutton = document.getElementById("gamebutton");
-const clearbutton = document.getElementById("gamebutton");
+const litbutton = document.getElementById("Button");
+const clearbutton = document.getElementById("Button");
 
 //Global variables
-let pattern = [2, 5, 4, 3, 2, 1, 2, 4, 6, 3, 2, 1, 4, 6, 6];
+let pattern = [2, 5, 4, 3, 2, 1, 2, 4, 6, 3, 2, 1, 4, 6, 6]; 
 let progress = 0;
 let gamePlaying = false;
 let tonePlaying = false;
 let volume = 0.9;
 let guessCounter = 0;
+
+
 
 // helper function - turn pattern into digits 
 function wordToNum(word) {
@@ -42,7 +44,7 @@ export function startGame(){
   progress = 0;
   gamePlaying = true;
   //swap start and stop buttons - hide and un-hide
-    start.classList.add("hidden");
+    start.setState.add("hidden");
     stop.classList.remove("hidden");
   playClueSequence();
 }
