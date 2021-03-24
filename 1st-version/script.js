@@ -89,11 +89,10 @@ function guess(btn){
   if(!gamePlaying){
     return;
   }
-
   //pattern generated - guesscounter starts at 0 
   //btn pressed
   // 5 == 5 
-  if(pattern[guessCounter] === btn){
+    if(pattern[guessCounter] === btn){
     //guesscounter starts at 0 , progress starts at 0 
     //0 == 0 
     //progress- so we know where we are at in the pattern of 15 digits 
@@ -113,9 +112,12 @@ function guess(btn){
       }else {
         //guess counter starts 0 and adds 1 as it progresses 
         guessCounter++;
+        console.log(guessCounter)
       }
-  }else {
-    loseGame();
+    }else{
+      if (mistakecount < 3) mistakecount++;
+      else loseGame();
+      console.log(mistakecount)
   }
 }
 
