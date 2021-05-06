@@ -24,6 +24,14 @@ $ git clone git@github.com:sandycamilo/INT2.3-Memory-Game.git
  $ cd INT2.3-Memory-Game
  
  ```
+  2. Run app
+ 
+ ```
+ $ yarn 
+ 
+ $ yarn start 
+ 
+ ```
  
  # Demo:
 
